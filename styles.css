@@ -1,0 +1,134 @@
+
+body {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.titulo {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    max-width: 350px;
+    margin-bottom: 20px; /* Añade espacio entre el título y la calculadora */
+    color: rgb(17, 0, 255);;
+}
+
+.calculator {
+    display: grid;
+    gap: 10px;
+    width: 90%;
+    max-width: 350px;
+    margin-bottom: 130px;
+}
+
+#display {
+    height: 40px;
+    font-size: 1.5rem;
+    text-align: right;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    
+}
+
+button {
+    padding: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 5px;
+    border-color: rgb(0, 136, 255);
+    color: rgb(17, 0, 255);
+}
+
+.clear{
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+}
+
+.equal{
+    color: rgb(255, 255, 255);
+    background-color: rgb(17, 0, 255);
+}
+
+.footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    position: fixed;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.footer .social-media {
+    margin-top: 10px;
+}
+
+.footer .social-media a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+.footer .social-media a:hover {
+    color: #00bfff;
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+
+    .titulo {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .calculator {
+        width: 100%; /* Ocupará el ancho completo en pantallas móviles */
+    }
+
+    #display {
+        font-size: 1.2rem; /* Reduce el tamaño de la fuente */
+        height: 35px;
+    }
+
+    button {
+        padding: 15px; /* Reduce el padding de los botones */
+        font-size: 1rem; /* Fuente más pequeña en los botones */
+    }
+
+    .footer {
+        font-size: 0.9rem;
+    }
+
+    .footer .social-media a {
+        font-size: 1rem;
+        margin: 0 5px;
+    }
+}
